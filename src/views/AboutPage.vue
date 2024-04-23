@@ -1,7 +1,4 @@
 <template>
-
-  <header-section></header-section>
-
   <!-- start history -->
   <section class="history">
     <div class="container">
@@ -253,11 +250,9 @@
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection.vue';
-import FooterSection from '@/components/FooterSection.vue';
 import OpenAccountBtn from '@/components/buttons/OpenAccountBtn.vue';
   export default {
-    components: { HeaderSection, FooterSection, OpenAccountBtn }
+    components: { OpenAccountBtn }
   }
 </script>
 

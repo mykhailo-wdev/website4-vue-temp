@@ -1,5 +1,4 @@
 <template>
-  <header-section></header-section>
   <sub-header :pageTitle="pageTitle"></sub-header>
   <section class="contacts-wrap">
     <div class="container">
@@ -122,8 +121,6 @@
 
 <script>
 import axios from 'axios';
-import HeaderSection from '@/components/HeaderSection.vue';
-import FooterSection from '@/components/FooterSection.vue';
 import SubHeader from '@/components/part-template/SubHeader.vue';
 import { VueTelInput } from 'vue3-tel-input';
 import 'vue3-tel-input/dist/vue3-tel-input.css';
@@ -183,7 +180,7 @@ export default {
     }
   }
 },
-  components: { HeaderSection, FooterSection, SubHeader, VueTelInput }
+  components: { SubHeader, VueTelInput }
 }
 </script>
 

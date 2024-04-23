@@ -1,5 +1,4 @@
 <template>
-  <header-section></header-section>
   <section class="legal">
     <div class="container">
       <div class="legal-row">
@@ -80,7 +79,6 @@
       </div>
     </div>
   </section>
-  <footer-section></footer-section>
 </template>
 
 <script>
@@ -121,7 +119,6 @@ export default {
       }
     }
   },
-  components: { HeaderSection, FooterSection },
   created() {
   this.updateActiveTab(this.activeTab);
   const docParam = this.$route.query.doc;

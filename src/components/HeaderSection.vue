@@ -229,6 +229,9 @@ export default {
     closeMenu() {
       this.isMenuOpen = false;
     },
+    handleMenuLinkClick() {
+    this.closeMenu();
+    },
     showSubmenu(section) {
       if (window.innerWidth <= 768) {
         for (const key in this.isSubmenuOpen) {
@@ -253,6 +256,10 @@ export default {
 
   },
   mounted() {
+    const menuLinks = document.querySelectorAll('.navbar-link');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', this.handleMenuLinkClick);
+    })
     if (window.innerWidth <= 768) {
       this.isSubmenuOpen = {
         home: false,
@@ -363,7 +370,7 @@ export default {
   }
   .navbar-open {
     z-index: 1000;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   .navbar-close {
     cursor: pointer;
@@ -459,6 +466,11 @@ export default {
       grid-column: 1/3;
       width: 130px;
       margin: 0 auto;
+      a {
+        img {
+          margin: 0 auto;
+        }
+      } 
     }
     .menu-btns {
       display: none;
