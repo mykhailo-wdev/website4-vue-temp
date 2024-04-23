@@ -1,5 +1,4 @@
 <template>
-  <header-section></header-section>
   <sub-header :pageTitle="pageTitle"></sub-header>
   <main>
     <section class="tradeholic-wrap">
@@ -8,12 +7,9 @@
       </div>
     </section>
   </main>
-  <footer-section></footer-section>
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection.vue';
-import FooterSection from '@/components/FooterSection.vue';
 import SubHeader from '@/components/part-template/SubHeader.vue';
 export default {
   data () {
@@ -21,7 +17,7 @@ export default {
       pageTitle: 'Advanced VODs'
     }
   },
-  components: { HeaderSection, FooterSection, SubHeader }
+  components: { SubHeader }
 }
 </script>
 

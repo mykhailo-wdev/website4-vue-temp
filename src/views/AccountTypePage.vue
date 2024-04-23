@@ -1,5 +1,4 @@
 <template>
-  <header-section></header-section>
   <sub-header pageTitle="account.accountTypes"></sub-header>
   <section class="account-wrap">
     <div class="container">
@@ -79,12 +78,9 @@
       </div>
     </div>
   </section>
-  <footer-section></footer-section>
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection.vue';
-import FooterSection from '@/components/FooterSection.vue';
 import SubHeader from '@/components/part-template/SubHeader.vue';
 import OpenAccountBtn from '@/components/buttons/OpenAccountBtn.vue';
 export default {
@@ -92,7 +88,7 @@ export default {
     return{
     }
   },
-  components: { HeaderSection, FooterSection, SubHeader, OpenAccountBtn }
+  components: { SubHeader, OpenAccountBtn }
 }
 </script>
 

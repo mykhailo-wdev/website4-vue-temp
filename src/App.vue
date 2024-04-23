@@ -1,15 +1,17 @@
 <template>
+  <header-section></header-section>
   <router-view></router-view>
+  <footer-section></footer-section>
   <scroller-top></scroller-top>
 </template>
 
 <script>
+import HeaderSection from './components/HeaderSection.vue';
+import FooterSection from './components/FooterSection.vue';
 import ScrollerTop from '@/components/ScrollerTop.vue';
-
-
 export default {
   name: 'App',
-  components: { ScrollerTop },
+  components: { HeaderSection, FooterSection, ScrollerTop },
   methods: {
     changeLanguage(lang) {
       document.documentElement.setAttribute('lang', lang);

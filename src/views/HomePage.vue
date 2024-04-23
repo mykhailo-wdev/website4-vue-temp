@@ -1,5 +1,4 @@
 <template>
-  <header-section></header-section>
   <!-- start info -->
   <section class="info">
     <div class="container">
@@ -311,12 +310,9 @@
     </div>
   </section>
   <!-- end learn --> 
-  <footer-section></footer-section>
 </template>
 
 <script>
-import HeaderSection from '@/components/HeaderSection.vue'
-import FooterSection from '@/components/FooterSection.vue';
 import OpenAccountBtn from '@/components/buttons/OpenAccountBtn.vue';
 import MobileLoginAccBtn from '@/components/buttons/MobileLoginAccBtn.vue';
 import { gsap } from "gsap";
@@ -342,9 +338,8 @@ gsap.registerPlugin(ScrollTrigger);
         this.previousActive = this.isToolActive[section] ? section : null;
       }
     },
-    components:  {  HeaderSection, 
+    components:  {   
                     OpenAccountBtn, 
-                    FooterSection,
                     MobileLoginAccBtn
                   },
     created () {
