@@ -1,0 +1,122 @@
+// Margin, Padding
+$m-space-8: clamp(4px, 0.7vw, 8px);
+$m-space-16: clamp(8px, 1.14vw, 16px);
+$m-space-24: clamp(12px, 1.71vw, 24px);
+$m-space-30: clamp(15px, 2.14vw, 30px);
+$m-space-32: clamp(16px, 2.28vw, 32px);
+$m-space-40: clamp(20px, 2.85vw, 40px);
+$m-space-48: clamp(24px, 3.42vw, 48px);
+$m-space-64: clamp(32px, 4.57vw, 64px);
+$m-space-70: clamp(35px, 5vw, 70px);
+$m-space-80: clamp(40px, 5.71vw, 80px);
+$m-space-88: clamp(44px, 6.29vw, 88px);
+$m-space-112: clamp(66px, 8vw, 112px);
+$m-space-132: clamp(76px, 9.43vw, 132px);
+
+// texts
+$h1-title: clamp(24px, 3.2vw, 46px);
+$h2-title: clamp(22px, 2.57vw, 36px);
+$h3-title: clamp(20px, 1.43vw, 26px);
+$h4-title: clamp(20px, 1.43vw, 26px);
+$text-strong: clamp(18px, 1.42vw, 20px);
+$text-info: clamp(16px, 1.28vw, 18px);
+
+// Colors
+$dark-silver: #666666;
+$light-silver: #f2f5f8;
+$dark-blue: #0267bb;
+$normal-blue: #13b3f0;
+$light-blue: #97def8;
+$btn-bg: linear-gradient(269.49deg, #13b3f0 0.35%, #97def8 99.57%);
+$color-black: #000000;
+$color-white: #ffffff;
+
+// Fonts
+$font-family-m: "Montserrat", sans-serif;
+$font-family-s: "Open Sans", sans-serif;
+
+
+// transitions
+$transition-extra: 0.3s ease-in-out;
+$transition-long: 0.5s ease-in-out;
+
+// Border-radius
+$border-radius-44: clamp(22px, 3.14vw, 44px);
+
+
+// Mixins
+@mixin btn-styles {
+  font-family: $font-family-m;
+  font-size: $text-info;
+  line-height: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+}
+@mixin flex-top-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@mixin flex-center-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin text-h1{
+  font-family: $font-family-m;
+  font-size: $h1-title;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.92px;
+  color: $color-black;
+  text-transform: uppercase;
+}
+@mixin text-h2{
+  font-family: $font-family-m;
+  font-size: $h2-title;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.74px;
+  color: $color-black;
+  text-transform: uppercase;
+}
+@mixin text-big{
+  font-family: $font-family-m;
+  font-size: $h3-title;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.52px;
+  color: $color-black;
+}
+@mixin text-big-upper{
+  font-family: $font-family-m;
+  font-size: $h3-title;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: 0.54px;
+  color: $color-black;
+  text-transform: uppercase;
+}
+@mixin text-main {
+  font-family: $font-family-s;
+  font-size: $text-info;
+  color: $dark-silver;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+}
+@mixin text-strong{
+  font-family: $font-family-m;
+  font-size: $text-strong;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: $color-black;
+}

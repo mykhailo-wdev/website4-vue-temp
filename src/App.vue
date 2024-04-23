@@ -1,10 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <router-view></router-view>
+  <scroller-top></scroller-top>
 </template>
+
+<script>
+import ScrollerTop from '@/components/ScrollerTop.vue';
+
+
+export default {
+  name: 'App',
+  components: { ScrollerTop },
+  methods: {
+    changeLanguage(lang) {
+      document.documentElement.setAttribute('lang', lang);
+    }
+  },
+  created() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || 'EN'; 
+    this.changeLanguage(lang);
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -13,18 +30,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
