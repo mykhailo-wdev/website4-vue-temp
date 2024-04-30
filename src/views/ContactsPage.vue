@@ -120,6 +120,7 @@
 </template>
 
 <script>
+import { initAnimationsContacts } from "@/animations/animContactsPage";
 import axios from 'axios';
 import SubHeader from '@/components/part-template/SubHeader.vue';
 import { VueTelInput } from 'vue3-tel-input';
@@ -137,7 +138,8 @@ export default {
       message: '',
       isFormSubmitted: false,
       isSuccess: false,
-      isLoading: false
+      isLoading: false,
+      animationInitializedContacts: false
     }
   },
   computed: {
@@ -178,8 +180,17 @@ export default {
         const phoneNumber = event.target.value;
         this.phone = phoneNumber;
     }
+  },
+  playAnimationsContacts() {
+      if (!this.animationInitializedContacts) {
+        initAnimationsContacts();
+        this.animationInitializedContacts = true;
+      }
   }
-},
+  },
+  mounted() {
+    this.playAnimationsContacts()
+  },
   components: { SubHeader, VueTelInput }
 }
 </script>

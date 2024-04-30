@@ -83,10 +83,23 @@
 <script>
 import SubHeader from '@/components/part-template/SubHeader.vue';
 import OpenAccountBtn from '@/components/buttons/OpenAccountBtn.vue';
+import { initAnimationsAccount } from "@/animations/animAccounTypes"
 export default {
   data (){
     return{
+      animationInitializedAccount: false
     }
+  },
+  methods: {
+    playAnimationsAccount() {
+      if (!this.animationInitializedAccount) {
+        initAnimationsAccount();
+        this.animationInitializedAccount = true;
+      }
+    }
+  },
+  mounted() {
+    this.playAnimationsAccount();
   },
   components: { SubHeader, OpenAccountBtn }
 }
