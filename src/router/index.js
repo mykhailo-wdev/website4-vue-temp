@@ -152,7 +152,11 @@ router.beforeEach((to, from, next) => {
   const lang = to.params.lang || 'en';
   const pageMeta = to.meta.title || '';
   document.title = `Brand name - ${pageMeta}`;
+  window.scrollTo(0, 0);
   next();
-});
+})
+
+
+
 
 export default router
